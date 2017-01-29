@@ -1,1 +1,0 @@
-# zanadar.github.io
