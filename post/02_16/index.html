@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> 02_16 &middot; CodeGrump </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.18.1" />
+
+
+<link rel="stylesheet" href="https://zanadar.github.io/css/vec.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<link href="" rel="alternate" type="application/rss+xml" title="CodeGrump" />
+
+</head>
+
+<body>
+  <header>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="https://zanadar.github.io">/home/codegrump</a>
+      </li>
+      
+      
+      <li class="pull-left current">
+        <a href="/post">~/post</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="/about">~/about</a>
+      </li>
+      
+  
+      <li class="pull-right"><a href=""><i class="fa fa-rss"></i></a></li>
+    </ul>
+  </nav>
+</header>
+  <div class="content">
+    
+    
+    <section class="post">
+      <h1 class="post-title"><a href="https://zanadar.github.io/post/02_16/">02_16</a></h1>
+      <span class="post-date">Feb 16, 2016 </span>
+      <div class="post-content">
+        <nav>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#did">Did</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+<h6 id="did">Did</h6>
+
+<ul>
+<li>Meditated</li>
+<li>Morning checkin</li>
+<li>Learned about <code>structs</code>, <code>slices</code>, and <code>maps</code> in <code>Go</code></li>
+<li>Continue to be amazed by <code>Go</code> (I&rsquo;ve never worked in compiled or typed language)</li>
+<li>Continue to have my brain broken by <code>Go</code> (its really weird to have to declare everything and think through a problem so thoroughly before writing the code)</li>
+<li>Implemented a simple word counting program in <code>Go</code></li>
+<li>Had lunch with Ben, Ryan, and Shaun</li>
+<li>Spent a long time talking with ^^^ about pointers (another new concept for me)</li>
+<li>Think about how weird pointers are. <code>Ruby</code> is pass by value but there are conventions to prevent you from mutating the underlying object (functions that mutate have a <code>!</code> in them eg <code>flatten!</code>)</li>
+
+<li><p>Except in <code>Ruby</code> all vars are pointers/references (I&rsquo;m still not clear if those are different)</p>
+
+<pre><code class="language-ruby">a = *(1..5) 
+# This is a _splat_ operator not a pointer
+b = a
+a &lt;&lt; 6
+puts b 
+ =&gt; [1, 2, 3, 4, 5, 6]
+</code></pre></li>
+
+<li><p>Read through <a href="http://ruby.bastardsbook.com/chapters/collections/">Bastard book of Ruby on collections</a></p></li>
+
+<li><p>Messed around with some array reversing in Ruby. These return a new array and reverse in place, respectively.
+```
+a = *(1..10)</p></li>
+</ul>
+
+<p>def reverse(arr)
+  temp = []
+  arr.each do |x|
+    temp.unshift(x)
+  end
+  temp
+end</p>
+
+<p>def clever_reverse!(arr)
+  last_index = arr.length - 1
+  for x in 0..arr.length/2
+    arr[x], arr[last_index - x] = arr[last_index - x], arr[x]
+  end
+  arr
+end</p>
+
+<p>test = reverse(a)
+puts &ldquo;A is #{a}&rdquo;
+puts &ldquo;test is #{test}&rdquo;
+cool_reverse(a)
+puts &ldquo;a is now #{a}&rdquo;
+      =&gt;
+      A is [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      test is [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+      a is now [10, 9, 8, 7, 5, 6, 4, 3, 2, 1]
+``<code>
+- Went to jobs talk
+- Read [this great article](http://www.mikeperham.com/2014/11/26/building-a-binary-tree-with-enumerable/) on binary trees in ruby using the</code>Ennumerable` module</p>
+
+      </div>
+    </section>
+    
+    <section class="pagination clearfix">
+      
+      <a class="btn previous " href="https://zanadar.github.io/post/02_15/"> 02_15 </a> 
+       
+      
+      <a class="btn next " href="https://zanadar.github.io/post/02_17/"> 02_17 </a> 
+      
+    </section>
+    
+    
+  </div>
+  
+  <footer>
+  <div class="footer-info">
+    <p>
+      <a href="mailto:zmackie@protonmail.com?subject="><i class="fa fa-envelope-o"></i> zmackie@protonmail.com </a>
+      {
+        <a href="https://gohugo.io/" title="Hugo :: A fast and modern static website engine">Hugo 0.18.1</a>,
+        <a href="https://github.com/IvanChou/yii.im" title="vec">Vec</a> 
+      }
+      {<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="CC BY-NC-ND 3.0">CC BY-NC-ND 3.0</a>}
+    </p>
+  </div>
+</footer>
+  
+  <script src="https://zanadar.github.io/js/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-57408564-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+
+</html>

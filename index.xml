@@ -6,35 +6,395 @@
     <description>Recent content on CodeGrump</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Jan 2017 18:06:10 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jun 2016 18:01:11 +0000</lastBuildDate>
     <atom:link href="https://zanadar.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>your new post</title>
-      <link>https://zanadar.github.io/post/your-new-post/</link>
-      <pubDate>Sat, 21 Jan 2017 18:06:10 -0500</pubDate>
+      <title>Projects</title>
+      <link>https://zanadar.github.io/post/Projects/</link>
+      <pubDate>Tue, 21 Jun 2016 18:01:11 +0000</pubDate>
       
-      <guid>https://zanadar.github.io/post/your-new-post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://zanadar.github.io/about/</link>
-      <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
-      
-      <guid>https://zanadar.github.io/about/</guid>
+      <guid>https://zanadar.github.io/post/Projects/</guid>
       <description>
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ullam earum dolorum! Sed, perspiciatis.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;p&gt;I just finished up a stint at the &lt;a href=&#34;http://recurse.com&#34;&gt;Recurse Center&lt;/a&gt;, which is a sort of educational retreat for programmers.  While I was there I worked on a number of projects and topics, some of which I explored on this blog. Below are links to some of the major projects I completed.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h3 id=&#34;lorem-ipsum-dolor&#34;&gt;Lorem ipsum dolor.&lt;/h3&gt;
+&lt;h5 id=&#34;links&#34;&gt;Links!&lt;/h5&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dicta corporis ad inventore itaque impedit dolor atque amet exercitationem! Veniam qui voluptas maiores vel laudantium necessitatibus, velit ducimus! Iste hic facere, accusamus fugiat enim facilis.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/DistSys-Go/pull/2&#34;&gt;Leader Election&lt;/a&gt;&lt;/strong&gt; for Raft distributed concensus algorithm (Go)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/DistSys-Go/pull/1&#34;&gt;Scheduler, jobs, and Map and Reduce functions&lt;/a&gt;&lt;/strong&gt;
+ for Map/Reduce implementation (Go)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/benlixir&#34;&gt;Bencode Decoder&lt;/a&gt;&lt;/strong&gt; for bittorrent client (Elixir)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/hack_assembler&#34;&gt;Assembler&lt;/a&gt;&lt;/strong&gt; for hack CPU (Ruby)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/shortstuff&#34;&gt;ShortStuff&lt;/a&gt;&lt;/strong&gt; URL shortener (Ruby)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ElixiRas</title>
+      <link>https://zanadar.github.io/post/ElixiRas/</link>
+      <pubDate>Thu, 14 Apr 2016 19:11:21 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/ElixiRas/</guid>
+      <description>&lt;p&gt;I recently watch &lt;a href=&#34;https://www.youtube.com/watch?v=kpzQrFC55q4&#34;&gt;this great talk&lt;/a&gt; about embedded Elixir and got super excited about the &lt;a href=&#34;http://nerves-project.org/&#34;&gt;Nerves Project&lt;/a&gt; which is a suite of tools for same.
+I did some hacking earlier this week using Nerves and Bake on my main machine to get things running. And I got &lt;code&gt;blinky&lt;/code&gt;, the &amp;ldquo;Hello World&amp;rdquo; of embedded, to build and run using Bake. ==Mind Blown!!==&lt;/p&gt;
+
+&lt;p&gt;I decided that I wanted to actually use Raspbian for my prototyping, on advice from folks in the #nerves room on &lt;a href=&#34;https://elixir-lang.slack.com&#34;&gt;Elixir-Lang Slack&lt;/a&gt;. Getting &lt;code&gt;Erlang&lt;/code&gt; and &lt;code&gt;Elixir&lt;/code&gt; built on the PI has been quite a challenge, with many false starts and frustrations. But thanks, again, to folks on Slack, I got it done. I decided to record the process for posterity, so the following is a tutorial of all the relevant steps.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note: The intention here is to produce an img specifically for doing embedded elixir programming on the pi that you can break out any time you want.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Start with a fresh Raspbian install and get internet and others basics like SSH, vim, etc. configured.&lt;/li&gt;
+&lt;li&gt;Follow steps here: &lt;a href=&#34;http://elinux.org/Erlang&#34;&gt;http://elinux.org/Erlang&lt;/a&gt;
+Building from source seems to be the most reliable way to get a good install. However, it&amp;rsquo;s &lt;strong&gt;mad slow&lt;/strong&gt; so be warned.&lt;/li&gt;
+&lt;li&gt;Install a precompiled Elixir. I used these &lt;a href=&#34;https://github.com/mmmries/pi-alarm-clock#install-precompiled-elixir&#34;&gt;instructions&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;After you&amp;rsquo;ve verified that everything is working (my acid test was doing a &lt;code&gt;mix compile&lt;/code&gt; for &lt;code&gt;elixir_ale&lt;/code&gt;) &lt;strong&gt;back up&lt;/strong&gt; your SD card using &lt;code&gt;dd if=/dev/rdiskx of=/path/to/image bs=1m&lt;/code&gt;. You&amp;rsquo;ll thank yourself later.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;And that&amp;rsquo;s it!&lt;/strong&gt; From there you have a working RasPI image you can use for all your elixir embedded development. Enjoy and get in contact if you have any questions.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Limits</title>
+      <link>https://zanadar.github.io/post/Limits/</link>
+      <pubDate>Sat, 02 Apr 2016 16:21:21 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/Limits/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m afraid to publish this post, but naming things can often kill their power over you, as Ged learned of his shadow. And so it is with some trepidation that I bring you the following story:&lt;/p&gt;
+
+&lt;p&gt;One of my goals at RC was to blog every day I was there. I kept this going for a good while, but I recently fell down. For the last two weeks it&amp;rsquo;s been radio silence. I have my limits, and though they aren&amp;rsquo;t fixed, I struggle to accept that they&amp;rsquo;re there at all. I thought I was getting better, I though I was getting stronger. And I hit a wall two weeks ago that I&amp;rsquo;ve been struggling to cross. Blogging stopped, I was too tired to go running or meditate, and I&amp;rsquo;ve had trouble programming. I&amp;rsquo;ve felt defeated. My depression does that; it saps me spiritually and physically.&lt;/p&gt;
+
+&lt;p&gt;I was barely there for my early twenties. I&amp;rsquo;ve struggled with depression most of my life. And it had me fully in its grip for about 5 years. I functioned, I held jobs, had friends, I muddled on. But I was a husk. I was looking at the world through a grimey pain of glass. It pretty much sucked.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m getting better now. For the past few years I&amp;rsquo;ve been working my way out of that grip. Therapy has been incredibly important in this fight, as has learning to accept my own limits and be kind to myself. The connection between all these things isn&amp;rsquo;t necessarily obvious, so I&amp;rsquo;ll elaborate a bit. Basically my depression brain sounds like this:
+&amp;gt;&amp;ldquo;Hmmm&amp;hellip;you&amp;rsquo;re not really meeting your goals here&amp;hellip;maybe you should just give up? You&amp;rsquo;ll never get there in any case.&lt;/p&gt;
+
+&lt;p&gt;At RC, I&amp;rsquo;ve been pushing myself. Its such an inspiring environment. I&amp;rsquo;m been surrounded by some of the smartest and kindest and most curious people I&amp;rsquo;ve ever encountered. And the standards of the community have really encouraged me to bring up my game.&lt;/p&gt;
+
+&lt;p&gt;But I also get sad (when the Winter 2&amp;rsquo;s leave ) 😢. I also get tired and overwhelmed and sick. I also suffer
+from a sense that I&amp;rsquo;ll never know what I need to know, that I&amp;rsquo;ll never be a good programmer. And programming
+is goddamn hard and frustrating. When depression rears its head and piles on with that quiet voice&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Maybe you&amp;rsquo;re having trouble because you&amp;rsquo;re not smart enough to hack it. Why bother?&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;things become a really ugly mess.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That&amp;rsquo;s what&amp;rsquo;s been going on over the past couple weeks. Spending time with friends, sleeping more, and breathing fresh air have helped me a lot. I&amp;rsquo;m starting to feel better. The good news is that therapy has taught me to identify twinges of depression sooner and to accept them without giving them too much significance. My depression may never really go away, but I also know now that I can and will feel better even when it pulls me down for a bit.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>03_15</title>
+      <link>https://zanadar.github.io/post/03_15/</link>
+      <pubDate>Tue, 15 Mar 2016 21:25:43 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/03_15/</guid>
+      <description>
+
+&lt;h5 id=&#34;did&#34;&gt;Did:&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ran&lt;/li&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Restarted my Raft code ie I 🔥ed my code from the last 7 days because it was 💩🍝 (crap spaghetti).&lt;/li&gt;
+&lt;li&gt;So far this^^ has been a really good decision. Things are going much more smoothly and the code is actually understandable.&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;m leaving off today mid-work. Currently attempting to implement a stateful &lt;code&gt;goroutine&lt;/code&gt; that I can send a &lt;code&gt;VoteRequestReply&lt;/code&gt; to, that will then send back an election result on a channel I provide it (the idea being to select against that channel and the timers). I&amp;rsquo;m not sure this is the the right way to handle elections, but for now the basic skeleton code of the loops and the timers is working. This &lt;a href=&#34;https://gobyexample.com/stateful-goroutines&#34;&gt;post&lt;/a&gt; may be useful&amp;hellip;.&lt;/li&gt;
+&lt;li&gt;Read a &lt;a href=&#34;http://the-paper-trail.org/blog/distributed-systems-theory-for-the-distributed-systems-engineer/&#34;&gt;good blogpost&lt;/a&gt; on distributed systems theory for engineers. This post lead me to a couple others that I browsed.&lt;/li&gt;
+&lt;li&gt;Talked about GSOC with Karan and Oguz.&lt;/li&gt;
+&lt;li&gt;Started drafting my Thursday talk&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>03_14</title>
+      <link>https://zanadar.github.io/post/03_14/</link>
+      <pubDate>Tue, 15 Mar 2016 16:20:05 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/03_14/</guid>
+      <description>
+
+&lt;h5 id=&#34;did&#34;&gt;Did:&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Went back to my Raft implementation. I blame Oguz for convincing me to restart it. That was a day of frustation.😤&lt;/li&gt;
+&lt;li&gt;Read Ch 1, 2 of &amp;lsquo;Mathematics for the General Reader&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;Did some online research on distributed systems related jobs. I looked at places like Hashicorp, CoreOS, Docker, CochroachDB, Mesos, CloudFoundry, Heroku, Digital Ocean, &amp;amp; Rackspace. I&amp;rsquo;m probably a couple years out from being able to get one of these, but its a goal&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>XOR for distance</title>
+      <link>https://zanadar.github.io/post/XOR-for-distance/</link>
+      <pubDate>Thu, 10 Mar 2016 21:13:16 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/XOR-for-distance/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been reading about the Kademlia DHT. Its a&amp;hellip;DHT&amp;hellip;that uses XOR to decide on node distance.
+To play with it a little bit I got some code going.
+&lt;a href=&#34;https://play.golang.org/p/F8CtJsvHs_&#34;&gt;https://play.golang.org/p/F8CtJsvHs_&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>03_10</title>
+      <link>https://zanadar.github.io/post/03_10/</link>
+      <pubDate>Thu, 10 Mar 2016 13:27:44 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/03_10/</guid>
+      <description>
+
+&lt;h5 id=&#34;did&#34;&gt;Did:&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ran&lt;/li&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Checkins&lt;/li&gt;
+&lt;li&gt;Worked on a little bit of my Raft implemetation. I&amp;rsquo;m gonna shelve it for a while. I feel like I learned a ton, but don&amp;rsquo;t have too much to show for it&amp;hellip;but I&amp;rsquo;m trying to be okay with that.&lt;/li&gt;
+&lt;li&gt;Started reading the paper about the Kademlia DHT.&lt;/li&gt;
+&lt;li&gt;Played with hashing &amp;amp; XORing in &lt;code&gt;Go&lt;/code&gt;. I made a little go playground here: &lt;a href=&#34;https://play.golang.org/p/F8CtJsvHs_&#34;&gt;https://play.golang.org/p/F8CtJsvHs_&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Practiced binary operations and counting by hand&lt;/li&gt;
+&lt;li&gt;Wrote some simple programs to create Sha1 hashes and XOR them against each other. Kademlia uses this for distance.&lt;/li&gt;
+&lt;li&gt;Presentations&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>03_09</title>
+      <link>https://zanadar.github.io/post/03_09/</link>
+      <pubDate>Thu, 10 Mar 2016 13:13:53 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/03_09/</guid>
+      <description>
+
+&lt;p&gt;🎉☀️ Beautiful day.&lt;/p&gt;
+
+&lt;h5 id=&#34;did&#34;&gt;Did:&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Worked on Raft. ugh. I&amp;rsquo;m really stuck. I refactored the code so that all the loops have their own timers and dft &lt;code&gt;goroutines&lt;/code&gt; aren&amp;rsquo;t sharing and modifying the same clocks. This should be better, but I haven&amp;rsquo;t gotten it to work.&lt;/li&gt;
+&lt;li&gt;Started to plan for the DHT and bittorrent clients.&lt;/li&gt;
+&lt;li&gt;Nand2 sectional. We talked about the potential hidden instructions in the ALU. Very interesting.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>03_08</title>
+      <link>https://zanadar.github.io/post/03_08/</link>
+      <pubDate>Wed, 09 Mar 2016 13:16:39 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/03_08/</guid>
+      <description>
+
+&lt;h5 id=&#34;did&#34;&gt;Did:&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ran&lt;/li&gt;
+&lt;li&gt;First silent meditation (I&amp;rsquo;ve been doing guided for about a month). 5 mins as a start. Flew by.&lt;/li&gt;
+&lt;li&gt;Checkin&lt;/li&gt;
+&lt;li&gt;Spent the morning working on IO for hack assembly.&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;m getting to like working with assembly a lot. Its really hard and granular, but there&amp;rsquo;s something super cool about working with the computer that deeply.&lt;/li&gt;
+&lt;li&gt;Went through the intro for MicroCorruption, which is a matasano assembly hacking game.&lt;/li&gt;
+&lt;li&gt;Talked to one of the new RC facilitators, James, when I was having a problem with above. This was super helpful and fun. Explaining it to him gave me a better understanding of what was going on and eventually helped me get the code working.&lt;/li&gt;
+&lt;li&gt;Got falafel w. Karan&lt;/li&gt;
+&lt;li&gt;Chat w. K and james. We talked about science infrastructure, job stuff, and Georgia Tech&lt;/li&gt;
+&lt;li&gt;Spent the afternoon working on Raft. I&amp;rsquo;ve done a lot of refactoring in order to make the code more understandable.
+This included moving the &lt;code&gt;handleVoting&lt;/code&gt; code into its own method and using &lt;code&gt;time.Ticker&lt;/code&gt; instead of countdowns that I was resetting all the time. I also managed to fix a bunch of race conditions, which should make things saner&amp;hellip;.but I broke the second test. Will get that working again tomorrow.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>03_07</title>
+      <link>https://zanadar.github.io/post/03_07/</link>
+      <pubDate>Tue, 08 Mar 2016 13:25:06 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/03_07/</guid>
+      <description>
+
+&lt;h5 id=&#34;did&#34;&gt;Did:&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Went for an awesome hike with a crew of RC people on Sunday. Today: Sore and slow.&lt;/li&gt;
+&lt;li&gt;Read through Ch.4 of nand2tetris.&lt;/li&gt;
+&lt;li&gt;Finished writing a hack assembly program to multiply two number&lt;/li&gt;
+&lt;li&gt;Started a program an IO program in above&lt;/li&gt;
+&lt;li&gt;Began drafting thursday presentation&lt;/li&gt;
+&lt;li&gt;Read &amp;lsquo;Coders at Work&amp;rsquo; chapter w/ Joe Armstrong&lt;/li&gt;
+&lt;li&gt;Watched a couple Go videos&lt;/li&gt;
+&lt;li&gt;Started debugging race conditions in my Raft implementation&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>03_03</title>
+      <link>https://zanadar.github.io/post/03_03/</link>
+      <pubDate>Fri, 04 Mar 2016 02:48:45 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/03_03/</guid>
+      <description>
+
+&lt;h4 id=&#34;did&#34;&gt;Did:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ran&lt;/li&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Checkin&lt;/li&gt;
+&lt;li&gt;Worked on Raft in Go&lt;/li&gt;
+&lt;li&gt;Learned the joy of (ab)using emojis in my debugging print statements&lt;/li&gt;
+&lt;li&gt;Got some recommendations about podcasting from Pam Selle and others. I&amp;rsquo;ve been thinking of putting my audio knowledge to use on making a podcast about distributed systems. I&amp;rsquo;m one of those people that learns by talking (this drives Justine crazy b/c I have to talk through everything) so I figure it&amp;rsquo;d be a great way to learn about the subject and to get to know people in that community.&lt;/li&gt;
+&lt;li&gt;Had a falafel with John&lt;/li&gt;
+&lt;li&gt;More work on Raft&lt;/li&gt;
+&lt;li&gt;Chatted with Mateusz about his app and learned about Google Data store&lt;/li&gt;
+&lt;li&gt;Went to presentations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FINALLLLY&lt;/strong&gt; 🎉🎉🎉🎉🎉🎉🎉🎉🎉 Got the first two tests to pass -&amp;gt; This means the servers will hold an initial election and then hold more if the leader times out.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>03_02</title>
+      <link>https://zanadar.github.io/post/03_02/</link>
+      <pubDate>Thu, 03 Mar 2016 00:20:13 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/03_02/</guid>
+      <description>
+
+&lt;h5 id=&#34;did&#34;&gt;Did:&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Worked on Raft leader voting and heartbeats in Go. That&amp;rsquo;s it pretty much. I&amp;rsquo;m kinda stuck b/c server&amp;rsquo;s are calling elections even though they&amp;rsquo;re also receiving heartbeats which should be resetting their electionTimers. Confuse. 🤔&lt;/li&gt;
+&lt;li&gt;Did group sectional for Nand2Tetris&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>03_01</title>
+      <link>https://zanadar.github.io/post/03_01/</link>
+      <pubDate>Tue, 01 Mar 2016 13:21:02 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/03_01/</guid>
+      <description>
+
+&lt;p&gt;First day of the new month 🗓&lt;/p&gt;
+
+&lt;h4 id=&#34;did&#34;&gt;Did:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ran&lt;/li&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Read about the &lt;a href=&#34;https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf&#34;&gt;Raft protocol&lt;/a&gt;. This paper is awesome. I love that understandability was a design goal. That&amp;rsquo;s really inspiring (they also attempt to prove that its actually better on that score).&lt;/li&gt;
+&lt;li&gt;Made Aeropress coffee inverted style ☕️ ⤵&lt;/li&gt;
+&lt;li&gt;Checkin&lt;/li&gt;
+&lt;li&gt;Watched lecture on Raft&lt;/li&gt;
+&lt;li&gt;Read/Watched Raft explanation&lt;/li&gt;
+&lt;li&gt;Made lots of chicken scratch 🐔 diagrams and sticky notes of Raft
+&lt;img src=&#34;http://ghst.s3.amazonaws.com/raft2.jpg&#34; alt=&#34;one note&#34; /&gt;
+&lt;img src=&#34;http://ghst.s3.amazonaws.com/raft1.jpg&#34; alt=&#34;another note&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Fiddled with vim for a long time and got ctags working thanks to &lt;code&gt;tagbar&lt;/code&gt;. This makes navigating Go files much much easier.&lt;/li&gt;
+&lt;li&gt;Walked to Houston halal cart for falafel on rice 🍚. Very good.&lt;/li&gt;
+&lt;li&gt;Started on raft election code. This involves creating the RequestVote RPC and the appendEntries RPC, and creating all sorts of structs and timers so the servers in the cluster have everything they need for Raft to work (at least that&amp;rsquo;s the theory&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;I might do a presentation about voting in Raft, or maybe about timekeeping in distributed systems this Thursday (probably the latter).&lt;/li&gt;
+&lt;li&gt;Had a nice walk with Ben, Jake, Kaley, and Oguz.&lt;/li&gt;
+&lt;li&gt;Nerded out about books with Jake.&lt;/li&gt;
+&lt;li&gt;More work on Raft code.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>02_29</title>
+      <link>https://zanadar.github.io/post/02_29/</link>
+      <pubDate>Mon, 29 Feb 2016 15:58:18 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/02_29/</guid>
+      <description>
+
+&lt;h5 id=&#34;did&#34;&gt;Did&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Finished reading about &lt;a href=&#34;https://pdos.csail.mit.edu/6.824/papers/gfs.pdf&#34;&gt;GFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Started learning &lt;code&gt;Erlang&lt;/code&gt;. I already love it. Pattern matching is ==amazebazookas==.&lt;/li&gt;
+&lt;li&gt;Read ch2, 3, 4, &amp;amp;&amp;amp; 5 of &lt;a href=&#34;http://learnyousomeerlang.com/&#34;&gt;Learn You Some Erlang&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Compared to quicksort in other languages, here&amp;rsquo;s &lt;code&gt;Erlang&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-erlang&#34;&gt;lc_quicksort([]) -&amp;gt; [];
+lc_quicksort([Pivot|Rest]) -&amp;gt;
+lc_quicksort([Smaller || Smaller &amp;lt;- Rest, Smaller =&amp;lt; Pivot]) % List comprehensions
+++ [Pivot] ++
+lc_quicksort([Larger || Larger &amp;lt;- Rest, Larger &amp;gt; Pivot]).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Whoah. This doesn&amp;rsquo;t necessarily perform awesomely, as you&amp;rsquo;re allocating a bunch of new lists and walking over them a lot, but still&amp;hellip;the code is really cool. And quite clear, even after only a day of working on the language. I like this weird language a lot.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Went to the Algorithms group talk by David and Shaun on some graph algorithms. This was really cool. I immediately saw how powerful and useful understanding graphs could be (as the represent relationships between things). They demonstrated some algorithms related to dependency and min spanning trees, used with concrete exampled of both (the order you take classes in and most cheaply routing a network to all cities in a graph).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Went to see Tega Brain talk about her work.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>02_26</title>
+      <link>https://zanadar.github.io/post/02_26/</link>
+      <pubDate>Sat, 27 Feb 2016 00:00:14 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/02_26/</guid>
+      <description>
+
+&lt;h5 id=&#34;did&#34;&gt;Did&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Worked on recursive algorithms&lt;/li&gt;
+&lt;li&gt;Installed and set up &lt;code&gt;jruby_processing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Did some basic examples with above&lt;/li&gt;
+&lt;li&gt;Wrote a Sierpinski gasket, which is a nice example of recursion.
+&lt;img src=&#34;http://ghst.s3.amazonaws.com/color_capture.png&#34; alt=&#34;gasket&#34; /&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Pertinent Code for above:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;def drawSquare(x, y, side)
+stroke 4
+if side &amp;lt;= 10
+fill(x % 255, y % 255, 255)
+else
+no_fill
+end
+rect x, y, side, side
+return unless side &amp;gt; 10
+drawSquare(x - side /2, y- side/2, side/2)
+drawSquare(x + side /2, y- side/2, side/2)
+drawSquare(x - side /2, y+ side/2, side/2)
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Did some work on sorting algorithms, especially merge-sort&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> 02_24 &middot; CodeGrump </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.18.1" />
+
+
+<link rel="stylesheet" href="https://zanadar.github.io/css/vec.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<link href="" rel="alternate" type="application/rss+xml" title="CodeGrump" />
+
+</head>
+
+<body>
+  <header>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="https://zanadar.github.io">/home/codegrump</a>
+      </li>
+      
+      
+      <li class="pull-left current">
+        <a href="/post">~/post</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="/about">~/about</a>
+      </li>
+      
+  
+      <li class="pull-right"><a href=""><i class="fa fa-rss"></i></a></li>
+    </ul>
+  </nav>
+</header>
+  <div class="content">
+    
+    
+    <section class="post">
+      <h1 class="post-title"><a href="https://zanadar.github.io/post/02_24/">02_24</a></h1>
+      <span class="post-date">Feb 25, 2016 </span>
+      <div class="post-content">
+        
+
+<h5 id="did">Did</h5>
+
+<ul>
+<li>Meditated</li>
+<li>Wrote <code>map</code> and <code>reduce</code> functions to count words in a bunch of Project Guttenberg books.</li>
+<li>Finished the <code>scheduling</code> function for the <code>Go</code> map/reduce lab with help from Oguz. Here&rsquo;s the code:</li>
+</ul>
+
+<pre><code class="language-go">	var done = make(chan bool)
+
+	for i := 0; i &lt; ntasks; i++ {
+		go func(i int) {
+			worker := &lt;-mr.registerChannel
+			args := DoTaskArgs{mr.jobName, mr.files[i], phase, i, nios}
+			ok := call(worker, &quot;Worker.DoTask&quot;, args, new(struct{}))
+			for ok != true {
+				worker = &lt;-mr.registerChannel
+				ok = call(worker, &quot;Worker.DoTask&quot;, args, new(struct{}))
+			}
+			done &lt;- true
+			mr.registerChannel &lt;- worker
+		}(i)
+	}
+
+	for i := 0; i &lt; ntasks; i++ {
+		&lt;-done
+	}
+
+</code></pre>
+
+<p>Basically this a queue of sorts. The scheduler creates a <code>goroutine</code> for each task, waits for a worker on the <code>registerChannel</code>, and when she gets one, she makes an <code>RPC</code> call for that worker to do the task (Map or Reduce). She waits until the RPC call succeeds, queuing more workers if necessary (weak worker failure code checking), and then pops the worker back into the queue and adds a <code>true</code> message to the done channel.</p>
+
+<p>Because these <code>RPC</code> calls are are done in differant <code>goroutines</code> than the main one, we, finally, have to wait for all of the <code>done</code> messages to appear and drain that channel.</p>
+
+<ul>
+<li>The above took a while to wrap my head around, but in the end I think it all makes pretty good sense. Writing <code>Go</code> is turning out to be lots of fun! (and channels make concurrency especially simple(not easy))</li>
+<li>Went to algorithms talk by Caleb on crypto.</li>
+<li>Ran through my Anki decks. Seems like it&rsquo;ll be helpful.</li>
+<li>Tried to explain Map/Reduce to Karan and John. I think I&rsquo;m starting to understand it myself. Which is good, because I&rsquo;m gonna present on it tomorrow&hellip;.</li>
+</ul>
+
+      </div>
+    </section>
+    
+    <section class="pagination clearfix">
+      
+      <a class="btn previous " href="https://zanadar.github.io/post/02_23/"> 02_23 </a> 
+       
+      
+      <a class="btn next " href="https://zanadar.github.io/post/02_25/"> 02_25 </a> 
+      
+    </section>
+    
+    
+  </div>
+  
+  <footer>
+  <div class="footer-info">
+    <p>
+      <a href="mailto:zmackie@protonmail.com?subject="><i class="fa fa-envelope-o"></i> zmackie@protonmail.com </a>
+      {
+        <a href="https://gohugo.io/" title="Hugo :: A fast and modern static website engine">Hugo 0.18.1</a>,
+        <a href="https://github.com/IvanChou/yii.im" title="vec">Vec</a> 
+      }
+      {<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="CC BY-NC-ND 3.0">CC BY-NC-ND 3.0</a>}
+    </p>
+  </div>
+</footer>
+  
+  <script src="https://zanadar.github.io/js/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-57408564-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+
+</html>

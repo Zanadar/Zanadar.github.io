@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> 02_10 &middot; CodeGrump </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.18.1" />
+
+
+<link rel="stylesheet" href="https://zanadar.github.io/css/vec.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<link href="" rel="alternate" type="application/rss+xml" title="CodeGrump" />
+
+</head>
+
+<body>
+  <header>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="https://zanadar.github.io">/home/codegrump</a>
+      </li>
+      
+      
+      <li class="pull-left current">
+        <a href="/post">~/post</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="/about">~/about</a>
+      </li>
+      
+  
+      <li class="pull-right"><a href=""><i class="fa fa-rss"></i></a></li>
+    </ul>
+  </nav>
+</header>
+  <div class="content">
+    
+    
+    <section class="post">
+      <h1 class="post-title"><a href="https://zanadar.github.io/post/02_10/">02_10</a></h1>
+      <span class="post-date">Feb 12, 2016 </span>
+      <div class="post-content">
+        <nav>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#did">Did</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+<h6 id="did">Did</h6>
+
+<ul>
+<li>Meditated</li>
+<li>Had lunch with former Skilledup people -&gt; Ali got a job at Twitch 🎮</li>
+<li>Installed Java ☕️</li>
+<li>Installed Nand2Tetris tools</li>
+<li>Had Nand2Tetris working session</li>
+<li>Worked on Boolean algebra -&gt; Write out truth table, come up with Boolean formula for a chip, check it
+against the truth table</li>
+<li>Installed vim syntax highlighting for Nand2Tetris</li>
+<li>Went to session about choosing and scoping projects</li>
+<li>Worked through <code>Not</code>, <code>And</code>, <code>Nor</code>, <code>Xor</code>, <code>Mux</code>, <code>Demux</code> chips using primitives (starting with <code>Nand</code>)</li>
+<li>Learned about <a href="https://en.wikipedia.org/wiki/De_Morgan's_laws">De Morgan&rsquo;s Laws</a></li>
+</ul>
+
+<blockquote>
+<p>The negation of a conjunction is the disjunction of the negations.</p>
+
+<p>The negation of a disjunction is the conjunction of the negations.
+<br></p>
+</blockquote>
+
+<pre><code class="language-bash">!(A &amp;&amp; B) == (!A) | (!B)
+!(A | B) == (!A) &amp;&amp; (!B)
+</code></pre>
+
+<blockquote>
+<p>If you think this is silly (talking to myself here&hellip;) look at how Yan used DeMorgan to find <a href="https://zyan.scripts.mit.edu/blog/">minifier backdooring bug</a></p>
+</blockquote>
+
+<ul>
+<li>Built a 1-to-2 line decoder with tests in <code>hdl</code>. This is apparrently useful for bussing.</li>
+<li>Build a Node module called <code>uptick</code> for a transform stream that increments numbers in brackets. This is useful for eg <code>Or(a=in[1], b=in[0],
+out=out[2])</code></li>
+<li>This may be something I can use in Vim -&gt; pipe a buffer to command line and back to buffer</li>
+<li>Started working on making it a CLI</li>
+</ul>
+
+      </div>
+    </section>
+    
+    <section class="pagination clearfix">
+      
+      <a class="btn previous " href="https://zanadar.github.io/post/02_11/"> 02_11 </a> 
+       
+      
+      <a class="btn next " href="https://zanadar.github.io/post/02_13/"> 02_13 </a> 
+      
+    </section>
+    
+    
+  </div>
+  
+  <footer>
+  <div class="footer-info">
+    <p>
+      <a href="mailto:zmackie@protonmail.com?subject="><i class="fa fa-envelope-o"></i> zmackie@protonmail.com </a>
+      {
+        <a href="https://gohugo.io/" title="Hugo :: A fast and modern static website engine">Hugo 0.18.1</a>,
+        <a href="https://github.com/IvanChou/yii.im" title="vec">Vec</a> 
+      }
+      {<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="CC BY-NC-ND 3.0">CC BY-NC-ND 3.0</a>}
+    </p>
+  </div>
+</footer>
+  
+  <script src="https://zanadar.github.io/js/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-57408564-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+
+</html>
