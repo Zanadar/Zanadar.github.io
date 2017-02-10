@@ -58,15 +58,22 @@
 
 <ul>
 <li>Meditated</li>
-<li>Did <code>fibonacci closure</code> exercise in Go -&gt; this was interesting, as go has parallel assignment
-<code>Go
-first, second := 0, 1
+<li>Did <code>fibonacci closure</code> exercise in Go -&gt; this was interesting, as Go has parallel assignment</li>
+</ul>
+
+<pre><code class="language-Go">first, second := 0, 1
 first, second = second, first + second
-</code></li>
+</code></pre>
 
-<li><p>Read more about <code>Ruby</code> and pass-by-reference vs pass-by-value. It turns out <code>Ruby</code> is (confusingly) pass-reference-by-value (aka object sharing). This is fucking weird but this quote from a <a href="http://robertheaton.com/2014/07/22/is-ruby-pass-by-reference-or-pass-by-value/">great blog</a> really helps sort it out:
-&gt; “Hamlet was not written by Shakespeare; it was merely written by a man named Shakespeare.” - PKD, <em>Valis</em></p></li>
+<ul>
+<li>Read more about <code>Ruby</code> and pass-by-reference vs pass-by-value. It turns out <code>Ruby</code> is (confusingly) pass-reference-by-value (aka object sharing). This is fucking weird but this quote from a <a href="http://robertheaton.com/2014/07/22/is-ruby-pass-by-reference-or-pass-by-value/">great blog</a> really helps sort it out:</li>
+</ul>
 
+<blockquote>
+<p>“Hamlet was not written by Shakespeare; it was merely written by a man named Shakespeare.” - PKD, <strong>Valis</strong></p>
+</blockquote>
+
+<ul>
 <li><p>This basically means that when you call a function, arguments are copies of the reference to the objects. If you do modification of the parameter in the function, you&rsquo;re modifying the underlying object because you have a reference to it (really, a copy of a reference to it). But if you reassign the argument to another object, this won&rsquo;t be reflected outside the scope of the function.</p></li>
 
 <li><p>Methods in <code>Go</code> usually have *pointer receivers so you can actually modify the value to which the receiver points, versus modifying the direct value which might be fine for a non-method function</p></li>
@@ -88,7 +95,7 @@ first, second = second, first + second
       <a class="btn previous " href="https://zanadar.github.io/post/02_16/"> 02_16 </a> 
        
       
-      <a class="btn next " href="https://zanadar.github.io/post/Night-and-Day/"> Night and Day </a> 
+      <a class="btn next " href="https://zanadar.github.io/post/Night_and_Day/"> Night and Day </a> 
       
     </section>
     

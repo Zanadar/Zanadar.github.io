@@ -11,10 +11,10 @@
     
     <item>
       <title>Projects</title>
-      <link>https://zanadar.github.io/post/Projects/</link>
+      <link>https://zanadar.github.io/Projects/</link>
       <pubDate>Tue, 21 Jun 2016 18:01:11 +0000</pubDate>
       
-      <guid>https://zanadar.github.io/post/Projects/</guid>
+      <guid>https://zanadar.github.io/Projects/</guid>
       <description>
 
 &lt;p&gt;I just finished up a stint at the &lt;a href=&#34;http://recurse.com&#34;&gt;Recurse Center&lt;/a&gt;, which is a sort of educational retreat for programmers.  While I was there I worked on a number of projects and topics, some of which I explored on this blog. Below are links to some of the major projects I completed.&lt;/p&gt;
@@ -142,10 +142,10 @@ is goddamn hard and frustrating. When depression rears its head and piles on wit
     
     <item>
       <title>XOR for distance</title>
-      <link>https://zanadar.github.io/post/XOR-for-distance/</link>
+      <link>https://zanadar.github.io/post/%5E4dist/</link>
       <pubDate>Thu, 10 Mar 2016 21:13:16 +0000</pubDate>
       
-      <guid>https://zanadar.github.io/post/XOR-for-distance/</guid>
+      <guid>https://zanadar.github.io/post/%5E4dist/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been reading about the Kademlia DHT. Its a&amp;hellip;DHT&amp;hellip;that uses XOR to decide on node distance.
 To play with it a little bit I got some code going.
 &lt;a href=&#34;https://play.golang.org/p/F8CtJsvHs_&#34;&gt;https://play.golang.org/p/F8CtJsvHs_&lt;/a&gt;&lt;/p&gt;

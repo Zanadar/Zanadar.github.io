@@ -6,33 +6,8 @@
     <description>Recent content in Posts on CodeGrump</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jun 2016 18:01:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Apr 2016 19:11:21 +0000</lastBuildDate>
     <atom:link href="https://zanadar.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Projects</title>
-      <link>https://zanadar.github.io/post/Projects/</link>
-      <pubDate>Tue, 21 Jun 2016 18:01:11 +0000</pubDate>
-      
-      <guid>https://zanadar.github.io/post/Projects/</guid>
-      <description>
-
-&lt;p&gt;I just finished up a stint at the &lt;a href=&#34;http://recurse.com&#34;&gt;Recurse Center&lt;/a&gt;, which is a sort of educational retreat for programmers.  While I was there I worked on a number of projects and topics, some of which I explored on this blog. Below are links to some of the major projects I completed.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h5 id=&#34;links&#34;&gt;Links!&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/DistSys-Go/pull/2&#34;&gt;Leader Election&lt;/a&gt;&lt;/strong&gt; for Raft distributed concensus algorithm (Go)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/DistSys-Go/pull/1&#34;&gt;Scheduler, jobs, and Map and Reduce functions&lt;/a&gt;&lt;/strong&gt;
- for Map/Reduce implementation (Go)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/benlixir&#34;&gt;Bencode Decoder&lt;/a&gt;&lt;/strong&gt; for bittorrent client (Elixir)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/hack_assembler&#34;&gt;Assembler&lt;/a&gt;&lt;/strong&gt; for hack CPU (Ruby)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Zanadar/shortstuff&#34;&gt;ShortStuff&lt;/a&gt;&lt;/strong&gt; URL shortener (Ruby)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
     <item>
       <title>ElixiRas</title>
@@ -142,10 +117,10 @@ is goddamn hard and frustrating. When depression rears its head and piles on wit
     
     <item>
       <title>XOR for distance</title>
-      <link>https://zanadar.github.io/post/XOR-for-distance/</link>
+      <link>https://zanadar.github.io/post/%5E4dist/</link>
       <pubDate>Thu, 10 Mar 2016 21:13:16 +0000</pubDate>
       
-      <guid>https://zanadar.github.io/post/XOR-for-distance/</guid>
+      <guid>https://zanadar.github.io/post/%5E4dist/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been reading about the Kademlia DHT. Its a&amp;hellip;DHT&amp;hellip;that uses XOR to decide on node distance.
 To play with it a little bit I got some code going.
 &lt;a href=&#34;https://play.golang.org/p/F8CtJsvHs_&#34;&gt;https://play.golang.org/p/F8CtJsvHs_&lt;/a&gt;&lt;/p&gt;
@@ -394,6 +369,32 @@ end
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Did some work on sorting algorithms, especially merge-sort&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>02_25</title>
+      <link>https://zanadar.github.io/post/02_25/</link>
+      <pubDate>Fri, 26 Feb 2016 23:50:04 +0000</pubDate>
+      
+      <guid>https://zanadar.github.io/post/02_25/</guid>
+      <description>
+
+&lt;h5 id=&#34;did&#34;&gt;Did&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ran. Weather was ☀️ great.&lt;/li&gt;
+&lt;li&gt;Meditated&lt;/li&gt;
+&lt;li&gt;Went to Evan&amp;rsquo;s talk about type inference. Interesting but a bit over my head as I&amp;rsquo;m just starting to get experience in a typed language.&lt;/li&gt;
+&lt;li&gt;Worked on slides for my talk &lt;a href=&#34;https://docs.google.com/presentation/d/1EK-1Rx7OsPNrNnhbgyE8tDTWUaP2doPA0gTV9AeLz5w/edit?usp=sharing&#34;&gt;MapReduce for Farmers&lt;/a&gt;
+(an idea I had on my run this morning)&lt;/li&gt;
+&lt;li&gt;Coded a &lt;code&gt;bit&lt;/code&gt;, &lt;code&gt;16bit Register&lt;/code&gt;, &lt;code&gt;RAM8&lt;/code&gt;, and &lt;code&gt;RAM64&lt;/code&gt;. These last two were awesome as they&amp;rsquo;re essentially recursively structured registers of registers and registers of RAM8. Another example of amazing complexity out of somewhat simple pieces.&lt;/li&gt;
+&lt;li&gt;Went to crit group and Andrew talked about his JS program for demonstrating Dijkstra&amp;rsquo;s algorithm&lt;/li&gt;
+&lt;li&gt;Prepped for talk&lt;/li&gt;
+&lt;li&gt;Watched awesome presentations&lt;/li&gt;
+&lt;li&gt;Delivered talk (I thought it went pretty well even though I was nervous). This was a big first step. One of my goals at RC is to improve technical writing and presenting skills, so these Thursday nights are awesome for that. I also made a joke about 💩. Now I just gotta write about more technical subjects&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Hung out after presentations for pizza and good chats with John and Karan.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -52,28 +52,9 @@
       <h1 class="post-title"><a href="https://zanadar.github.io/post/02_16/">02_16</a></h1>
       <span class="post-date">Feb 16, 2016 </span>
       <div class="post-content">
-        <nav>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#did">Did</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+        
 
-<h6 id="did">Did</h6>
+<h5 id="did">Did</h5>
 
 <ul>
 <li>Meditated</li>
@@ -85,52 +66,55 @@
 <li>Had lunch with Ben, Ryan, and Shaun</li>
 <li>Spent a long time talking with ^^^ about pointers (another new concept for me)</li>
 <li>Think about how weird pointers are. <code>Ruby</code> is pass by value but there are conventions to prevent you from mutating the underlying object (functions that mutate have a <code>!</code> in them eg <code>flatten!</code>)</li>
+<li>Except in <code>Ruby</code> all vars are pointers/references (I&rsquo;m still not clear if those are different)</li>
+</ul>
 
-<li><p>Except in <code>Ruby</code> all vars are pointers/references (I&rsquo;m still not clear if those are different)</p>
-
-<pre><code class="language-ruby">a = *(1..5) 
+<pre><code class="language-ruby">a = *(1..5)
 # This is a _splat_ operator not a pointer
 b = a
 a &lt;&lt; 6
-puts b 
- =&gt; [1, 2, 3, 4, 5, 6]
-</code></pre></li>
+puts b
+     =&gt; [1, 2, 3, 4, 5, 6]
+</code></pre>
 
-<li><p>Read through <a href="http://ruby.bastardsbook.com/chapters/collections/">Bastard book of Ruby on collections</a></p></li>
-
-<li><p>Messed around with some array reversing in Ruby. These return a new array and reverse in place, respectively.
-```
-a = *(1..10)</p></li>
+<ul>
+<li>Read through <a href="http://ruby.bastardsbook.com/chapters/collections/">Bastard book of Ruby on collections</a></li>
+<li>Messed around with some array reversing in Ruby. These return a new array and reverse in place, respectively.</li>
 </ul>
 
-<p>def reverse(arr)
+<pre><code class="language-ruby">a = *(1..10)
+
+def reverse(arr)
   temp = []
   arr.each do |x|
     temp.unshift(x)
   end
   temp
-end</p>
+end
 
-<p>def clever_reverse!(arr)
+def clever_reverse!(arr)
   last_index = arr.length - 1
   for x in 0..arr.length/2
     arr[x], arr[last_index - x] = arr[last_index - x], arr[x]
   end
   arr
-end</p>
+end
 
-<p>test = reverse(a)
-puts &ldquo;A is #{a}&rdquo;
-puts &ldquo;test is #{test}&rdquo;
-cool_reverse(a)
-puts &ldquo;a is now #{a}&rdquo;
+test = reverse(a)
+puts &quot;A is #{a}&quot;
+puts &quot;test is #{test}&quot;
+clever_revers!(a)
+puts &quot;a is now #{a}&quot;
       =&gt;
       A is [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
       test is [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
       a is now [10, 9, 8, 7, 5, 6, 4, 3, 2, 1]
-``<code>
-- Went to jobs talk
-- Read [this great article](http://www.mikeperham.com/2014/11/26/building-a-binary-tree-with-enumerable/) on binary trees in ruby using the</code>Ennumerable` module</p>
+</code></pre>
+
+<ul>
+<li>Went to jobs talk</li>
+<li>Read <a href="http://www.mikeperham.com/2014/11/26/building-a-binary-tree-with-enumerable/">this great article</a> on binary trees in ruby using the <code>Ennumerable</code> module</li>
+</ul>
 
       </div>
     </section>
