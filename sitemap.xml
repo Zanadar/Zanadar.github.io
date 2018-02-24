@@ -1,180 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://zanadar.github.io/Projects/</loc>
-    <lastmod>2016-06-21T18:01:11+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/ElixiRas/</loc>
-    <lastmod>2016-04-14T19:11:21+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/Limits/</loc>
+    <loc>https://www.zmackie.com/post/limits/</loc>
     <lastmod>2016-04-02T16:21:21+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zanadar.github.io/post/03_15/</loc>
-    <lastmod>2016-03-15T21:25:43+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/03_14/</loc>
-    <lastmod>2016-03-15T16:20:05+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/%5E4dist/</loc>
+    <loc>https://www.zmackie.com/post/4dist/</loc>
     <lastmod>2016-03-10T21:13:16+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zanadar.github.io/post/03_10/</loc>
-    <lastmod>2016-03-10T13:27:44+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/03_09/</loc>
-    <lastmod>2016-03-10T13:13:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/03_08/</loc>
-    <lastmod>2016-03-09T13:16:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/03_07/</loc>
-    <lastmod>2016-03-08T13:25:06+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/03_03/</loc>
-    <lastmod>2016-03-04T02:48:45+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/03_02/</loc>
-    <lastmod>2016-03-03T00:20:13+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/03_01/</loc>
-    <lastmod>2016-03-01T13:21:02+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_29/</loc>
-    <lastmod>2016-02-29T15:58:18+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_26/</loc>
-    <lastmod>2016-02-27T00:00:14+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_25/</loc>
-    <lastmod>2016-02-26T23:50:04+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_24/</loc>
-    <lastmod>2016-02-25T01:07:58+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_23/</loc>
-    <lastmod>2016-02-23T20:03:47+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_22/</loc>
-    <lastmod>2016-02-23T02:00:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/Go/</loc>
-    <lastmod>2016-02-20T23:16:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/Night_and_Day/</loc>
-    <lastmod>2016-02-20T17:10:15+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_17/</loc>
-    <lastmod>2016-02-17T16:43:40+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_16/</loc>
-    <lastmod>2016-02-16T21:22:08+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_15/</loc>
-    <lastmod>2016-02-15T19:22:58+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/Week_1/</loc>
-    <lastmod>2016-02-14T21:47:05+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_13/</loc>
-    <lastmod>2016-02-14T00:36:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_12/</loc>
-    <lastmod>2016-02-12T00:45:29+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_11/</loc>
-    <lastmod>2016-02-11T20:16:29+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_10/</loc>
-    <lastmod>2016-02-10T20:34:09+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_09/</loc>
-    <lastmod>2016-02-09T21:00:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/post/02_08/</loc>
-    <lastmod>2016-02-08T21:04:09+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/about/</loc>
+    <loc>https://www.zmackie.com/about/</loc>
     <lastmod>2016-02-03T16:52:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zanadar.github.io/post/Hello_World/</loc>
-    <lastmod>2016-02-03T00:26:40+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zanadar.github.io/</loc>
-    <lastmod>2016-06-21T18:01:11+00:00</lastmod>
+    <loc>https://www.zmackie.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zanadar.github.io/post/</loc>
-    <lastmod>2016-04-14T19:11:21+00:00</lastmod>
+    <loc>https://www.zmackie.com/post/</loc>
+    <lastmod>2016-04-02T16:21:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zmackie.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zmackie.com/</loc>
+    <lastmod>2016-04-02T16:21:21+00:00</lastmod>
     <priority>0</priority>
   </url>
   
